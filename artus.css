@@ -1,0 +1,159 @@
+/*Page complète style*/
+body{background-color: rgb(3, 3, 3);
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;}
+
+body a:visited {/*Permet de modifier les liens*/
+        color: white; /*Remplacez par la couleur souhaitée */
+        text-decoration: none; /*enlève le soulignement partout */ }
+
+
+
+/*Bannière*/
+.Menu{background-color: rgb(70, 240, 215);
+    display : flex;
+    flex-direction: row;
+    gap: 20px; 
+    justify-content: space-around;
+    padding: 1%;}
+
+    #burger {display: none;}
+
+    .burger {display: none;
+        font-size: 30px;}
+
+
+
+/*Création de 2 colonnes pour sommaire à droite*/
+main{display: grid;
+    grid-template-columns: 100px 1fr;/* 100px = colonne sommaire à gauche + Contenu flexible */
+    gap: 2rem;/*1rem=16px par défaut*/
+    align-items: start;
+    padding:2%}
+
+
+
+/*Ecriture style*/
+h2{ color: rgb(0, 177, 151);
+    text-decoration: underline;}
+
+h3{ text-align: center;
+    color: rgb(0, 177, 151);
+    font-style: oblique;}
+
+h4{ color: rgb(0, 177, 151);
+    font-style: oblique; }
+
+.Titre{text-align: center;
+    color: rgb(1, 120, 102); }
+
+
+
+/*Sommaire : disposition et style*/
+.Sommaire{position: sticky;
+    top: 1.5rem;
+    padding: 1px;
+    border-left: 2px solid rgb(70, 240, 215);/*Bordure de gauche uniquement*/}
+
+    .Sommaire li{list-style: none;}/*Enlève les points avant chaque mot*/
+    
+    small{display:none;} /*Le sommaire n'apparait pas sur grand écran*/
+
+
+
+/*Colonne de droite*/   
+.Biographie, .Carrière, .Handicap, .vid, .Bisous, .cloture{
+    border : 2px solid rgb(70, 240, 215);
+    box-shadow:-10px -5px 10px rgb(0, 177, 151);
+    grid-column-start: 2;
+    grid-column-end: 3;
+    padding:2%;}
+
+
+
+/*Permet d'aligner les textes à l'horizontal*/
+.Bio, .Théatre, .Filmographie {display : flex;
+            flex-wrap: wrap;
+            gap: 20px;}
+
+
+
+/*Permet de centrer les textes et photos*/
+.Nominations, .Handi-contenu{display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 20px;}
+
+.Bisous{text-align: center;}
+
+
+
+/*Images : Bordure, profondeur et grossissement*/
+.Titre img, .Bio img, .Seul img, .Nominations img, .Handi-contenu img, .Bisous img{
+    border : 3px solid rgb(1, 120, 102);
+    box-shadow:20px 10px 15px rgb(0, 177, 151)/*droitegauche hautbas taille*/}
+.Titre img:hover{transition: transform 1s ease;
+    transform: scale(1.5);}
+.Bio img:hover{transition: transform 1s ease;
+    transform: scale(1.5);}
+.Seul img:hover{transition: transform 1s ease;
+    transform: scale(1.5);}
+.Nominations img:hover{transition: transform 1s ease;
+    transform: scale(2);}
+.Handi-contenu img:hover{transition: transform 1s ease;
+    transform: scale(1.5);}
+.Bisous img:hover{transition: transform 1s ease;
+    transform: scale(3);}
+
+
+
+/*Cela leur dit de prendre toute la place disponible, mais de passer l'un sous l'autre dès que l'écran devient trop étroit (moins de 300px par bloc)*/
+.Bio1, .Bio2, .Seul, .Piece, .Cinema, .Series{flex: 1 1 300px} 
+
+
+
+/*Lien Github*/
+.cloture ul{display : flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap : 4rem}
+
+.cloture img{width:50px;
+    height:50px;
+    border-radius: 50px;
+    border: 2px solid rgb(1, 120, 102);
+    box-shadow:10px 5px 10px rgb(0, 177, 151)}
+
+    .cloture img:hover{transition: transform 1s ease;
+    transform: scale(3.05);}
+
+
+
+
+/*Responsive*/
+@media screen and (max-width: 768px) {
+    .Menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 0;}/*Passe le menu en colonne sur mobile */
+
+    main {grid-template-columns: 1fr; /* Supprime la colonne de 100px à gauche */
+        gap: 1rem;}/*Transforme la grille principale en 1 seule colonne */
+
+    .Sommaire {position: static;/*Enlève le "sticky" du sommaire pour qu'il s'affiche en haut */
+        border-left: none;
+        border-bottom: 2px solid rgb(70, 240, 215);
+        padding-bottom: 10px;}
+    .Sommaire ul{display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem}
+
+    .Biographie, .Carrière, .Handicap, .vid, .Bisous, .cloture{grid-column: 1 / -1; /* Prend toute la largeur de la grille */}/*Replace toutes les sections dans l'unique colonne (colonne 1) */
+    .burger {display: block;}
+    .Menu{display: none;}
+    #burger:checked ~ .Menu {display: flex;}
+    small{display: block; }}
+
