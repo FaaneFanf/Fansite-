@@ -3,7 +3,7 @@ body{background-color: rgb(3, 3, 3);
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;}
 
-body a:visited {/*Permet de modifier les liens*/
+body a {/*Permet de modifier les liens*/
         color: white; /*Remplacez par la couleur souhaitée */
         text-decoration: none; /*enlève le soulignement partout */ }
 
