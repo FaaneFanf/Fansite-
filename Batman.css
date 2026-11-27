@@ -1,11 +1,13 @@
 /* Explication de mon CSS */
 
-/* Pour toute la page */
+/* Pour cibler toute mon HTML */
 *{
     margin:2px; /*marge sur les côtés*/
     padding:0; /*marge entre les éléments*/
     box-sizing:border-box; 
-    /*inclure les marges intérieures (padding) et les bordures (border) dans la largeur (width) et la hauteur (height)*/
+    /*Je veux que mon ensemble soit harmonieux
+    Je veux des marges identiques = intérieures (padding) 
+    et les bordures (border) dans la largeur (width) et la hauteur (height)*/
 }
 
 /*pour styliser le bandeau du haut*/
@@ -14,8 +16,9 @@
     align-items: center;
     justify-content: space-between;
     gap: 10px;
-    padding: 1rem;
+    padding: 1rem; /*espace entre le contenu de mon élément et sa bordure*/
     background-color: #ddcfcf;}
+
 /*pour modifier seulement le texte du bandeau (a = lien*/
 .bandeau a {color: #dd5115;
     text-decoration: none;}
@@ -29,12 +32,6 @@ body{
 
 
 /* Mes articles en mode journal */
-.journal{
-    max-width:700px;
-    border:4px solid #444;
-    padding:25px;
-    font-family: Georgia, serif;
-}
 
 /* Titre supérieur */
 .gros_titre{
@@ -59,6 +56,7 @@ h1{
     line-height:1;
     color:#444;
     font-family:'Arial Narrow', sans-serif;
+    /*Epaisseur du titre*/
     font-weight:900;
 }
 
@@ -114,11 +112,9 @@ h1{
 }
 
 
-
 .logobatman{
     width:450px;
     height:auto;
-    border:none;
 }
 
 .gifbatman{
@@ -135,7 +131,6 @@ h1{
     max-width:400px;
     margin: 20px auto;
     border:3px solid #8c0a0a;
-    display:block;
     border-radius: 120px;
     transition: transform 0.3s ease;
     box-shadow:-20px -10px 15px rgba(139,0,0,0.5);
@@ -147,7 +142,6 @@ h1{
 
 
 .films {
-    display:flex;
     justify-content:center;
     align-items:center;
 }
@@ -156,7 +150,6 @@ h1{
     max-width:400px;
     margin: 20px auto;
     border:3px solid #8c0a0a;
-    display:block;
     border-radius: 50px; 
     transition: transform 0.3s ease;
     box-shadow: 20px 15px 15px rgba(139,0,0,0.5);
@@ -167,7 +160,6 @@ h1{
 }
 
 .jeux {
-    display:flex;
     justify-content:center;
     align-items:center;
 }
@@ -176,7 +168,6 @@ h1{
     max-width:400px;
     margin: 20px auto;
     border:3px solid #8c0a0a;
-    display:block;
     border-radius: 100px; 
     transition: transform 0.3s ease;
     box-shadow:-20px 15px 15px rgba(139,0,0,0.5);
@@ -187,7 +178,6 @@ h1{
 }
 
 .meilleur {
-    display:flex;
     justify-content:center;
     align-items:center;
 }
@@ -196,7 +186,6 @@ h1{
     max-width:800px;
     margin: 20px auto;
     border:3px solid #8c0a0a;
-    display:block;
     transition: transform 0.3s ease;
     box-shadow:15px 15px 15px rgba(139,0,0,0.5);
     transform-origin: center;
@@ -207,7 +196,6 @@ h1{
 }
 
 .mechants {
-    display:flex;
     justify-content:center;
     align-items:center;
 }
@@ -216,7 +204,6 @@ h1{
     max-width:500px;
     margin: 20px auto;
     border:3px solid #8c0a0a;
-    display:block;
     box-shadow:-20px 15px 15px rgba(139,0,0,0.5);
     transition: transform 0.3s ease;
 }
@@ -230,7 +217,6 @@ h1{
     width: 100%;
     max-width: 600px;
     height: auto;
-    display: block;
     margin: 20px auto;
     border-radius: 10px;
     border:3px solid #8b0000;
